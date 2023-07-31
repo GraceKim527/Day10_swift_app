@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     let MAX_ARRAY_NUM = 10
-    let PICKER_VIEW_COLUMN = 1
+    let PICKER_VIEW_COLUMN = 2
+    let PICKER_VIEW_HEIGHT:CGFloat = 80
     var imageArray = [UIImage?]()
     var imageFileName = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"]
     
@@ -56,8 +57,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     // 선택된 파일명을 레이블에 출력하는 메서드
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        lbImageFileName.text = imageFileName[row]
-        imageView.image = imageArray[row]
+//        lbImageFileName.text = imageFileName[row]
+//        imageView.image = imageArray[row]
+        
+        // 첫 번째 컬럼의 경우, 파일이름만 변경
+        if (component==0) {
+            lbImageFileName.text = imageFileName[row]
+        }
+        else { // 두 번째 컬럼의 경우, 이미지만 변경
+            imageView.image = imageArray[row]
+        }
+
     }
     
 
