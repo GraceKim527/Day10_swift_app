@@ -66,6 +66,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="rsB-LD-K8P"/>
                         <segue destination="AVe-3v-2Yf" kind="relationship" relationship="viewControllers" id="Iab-BP-KaL"/>
                         <segue destination="dYU-re-nu4" kind="relationship" relationship="viewControllers" id="HIC-6N-dHK"/>
+                        <segue destination="QIR-Ft-Zjh" kind="relationship" relationship="viewControllers" id="mLZ-cQ-z2g"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtJ-eA-4KJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -159,6 +160,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKG-OR-gjH" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="914" y="392"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="129-kb-chl">
+            <objects>
+                <viewController id="QIR-Ft-Zjh" customClass="SearchViewController" customModule="Tab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hba-Ve-vYb">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAI-Gl-MFJ">
+                                <rect key="frame" x="0.0" y="101" width="393" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QIR-Ft-Zjh" id="V9h-FD-Yd1"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dua-4g-Wp7">
+                                <rect key="frame" x="16" y="322" width="115" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9B-o4-9Kk">
+                                <rect key="frame" x="133" y="322" width="244" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03w-9m-hcv">
+                                <rect key="frame" x="16" y="427" width="361" height="391"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aXm-WQ-ibG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="Z1J-Oe-KbR"/>
+                    <connections>
+                        <outlet property="imageView" destination="03w-9m-hcv" id="QAd-tg-J5e"/>
+                        <outlet property="lbImageFileName" destination="b9B-o4-9Kk" id="hsf-fh-0gM"/>
+                        <outlet property="pickerImage" destination="lAI-Gl-MFJ" id="qTv-MC-3RE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHJ-fL-0ZA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="724"/>
         </scene>
     </scenes>
     <resources>
